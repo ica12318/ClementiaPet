@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Relax.png;Assets\Move.png;Assets\Interact.png;Assets\Lift.png;Assets\RayMotion.png;Assets\ray.png;Assets\RayTiming.txt" LogicalName="%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\content\zh-CN.json" LogicalName="zh-CN.json" />
+    <EmbeddedResource Include="..\..\content\conversation.zh-CN.json" LogicalName="conversation.zh-CN.json" WithCulture="false" />
+  </ItemGroup>
+</Project>

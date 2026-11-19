@@ -1,0 +1,399 @@
+{
+  "ui": {
+    "talk":"聊两句", "resume":"接着聊", "preferences":"问候与提醒", "evening":"晚间问候",
+    "idle":"随机闲谈", "water":"喝水提醒", "interval":"喝水间隔", "minutes":"{0} 分钟",
+    "title":"与克莱门莎聊两句", "input":"回复", "send":"发送", "pet":"克莱门莎", "user":"博士"
+  },
+  "lines": [
+    {
+      "id": "evening.1",
+      "category": "evening",
+      "text": "晚上好，博士。我正给手稿收个尾。您想听听最后一句吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "manuscript",
+      "basis": "研究词语，斟酌手稿的措辞。"
+    },
+    {
+      "id": "evening.2",
+      "category": "evening",
+      "text": "晚上好，博士。今晚有一句话，我很想读给您听。",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "manuscript",
+      "basis": "研究词语，斟酌手稿的措辞。"
+    },
+    {
+      "id": "evening.3",
+      "category": "evening",
+      "text": "博士，晚上好。我们接着聊那本小说，还是改天再谈？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "novel",
+      "basis": "与人交换对历史小说的看法。"
+    },
+    {
+      "id": "evening.4",
+      "category": "evening",
+      "text": "晚上好。故事还剩最后一页，博士想猜猜它怎样收尾吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "novel",
+      "basis": "与人交换对历史小说的看法。"
+    },
+    {
+      "id": "water.1",
+      "category": "water",
+      "text": "我想停笔喝口水。博士，您也歇一口吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "water",
+      "basis": "邀请博士茶歇，尊重对方的安排。"
+    },
+    {
+      "id": "water.2",
+      "category": "water",
+      "text": "博士，到了您留给茶歇的时间。喝口水再继续？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "water",
+      "basis": "邀请博士茶歇，尊重对方的安排。"
+    },
+    {
+      "id": "water.3",
+      "category": "water",
+      "text": "我给自己留了片刻茶歇。博士也想休息一会儿吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "water",
+      "basis": "邀请博士茶歇，尊重对方的安排。"
+    },
+    {
+      "id": "water.4",
+      "category": "water",
+      "text": "茶歇的时间到了。博士，陪我喝口水吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "water",
+      "basis": "邀请博士茶歇，尊重对方的安排。"
+    },
+    {
+      "id": "idle.1",
+      "category": "idle",
+      "text": "手记末尾留了一行，读给您听听？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "manuscript",
+      "basis": "研究词语，斟酌手稿的措辞。"
+    },
+    {
+      "id": "idle.2",
+      "category": "idle",
+      "text": "博士，您觉得一个词能让结局变个样吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "manuscript",
+      "basis": "研究词语，斟酌手稿的措辞。"
+    },
+    {
+      "id": "idle.3",
+      "category": "idle",
+      "text": "读历史小说时，您会先翻到最后一页吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "novel",
+      "basis": "与人交换对历史小说的看法。"
+    },
+    {
+      "id": "idle.4",
+      "category": "idle",
+      "text": "同一段往事，两位证人竟讲得很不一样。要聊聊这个故事吗？",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "novel",
+      "basis": "与人交换对历史小说的看法。"
+    },
+    {
+      "id": "idle.5",
+      "category": "idle",
+      "text": "我刚给一页手稿换了个句号。读起来，好像终于可以歇口气了。",
+      "forms": [
+        "human",
+        "ray"
+      ],
+      "next": "manuscript",
+      "basis": "研究词语，斟酌手稿的措辞。"
+    },
+    {
+      "id": "idle.6",
+      "category": "idle",
+      "text": "我可以在这儿停一会儿。博士，想听一段小说吗？",
+      "forms": [
+        "ray"
+      ],
+      "next": "novel",
+      "basis": "与人交换对历史小说的看法。"
+    },
+    {
+      "id": "idle.7",
+      "category": "idle",
+      "text": "我在页边折了个小角。下次再读，想从这句话开始。",
+      "forms": [
+        "human"
+      ],
+      "next": "manuscript",
+      "basis": "研究词语，斟酌手稿的措辞。"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "home",
+      "prompt": "博士，想从哪一页谈起？",
+      "options": [
+        {
+          "label": "聊聊手稿",
+          "words": [
+            "手稿",
+            "手记",
+            "措辞"
+          ],
+          "reply": "我正给手稿收尾。想听听最后一句吗？",
+          "next": "manuscript",
+          "action": ""
+        },
+        {
+          "label": "聊聊小说",
+          "words": [
+            "小说",
+            "阅读"
+          ],
+          "reply": "我刚合上一本历史小说。博士想从哪里聊起？",
+          "next": "novel",
+          "action": ""
+        },
+        {
+          "label": "聊聊小帮手",
+          "words": [
+            "小帮手",
+            "名字"
+          ],
+          "reply": "我在给小帮手想个称呼。您想听听我挑的那个吗？",
+          "next": "helper",
+          "action": ""
+        }
+      ]
+    },
+    {
+      "id": "helper",
+      "prompt": "您想听听那个称呼吗？",
+      "options": [{"label":"叫什么？","words":["叫什么","想听","好"],"reply":"逗号。念到它，总觉得下一句还有人要接。","next":"helperName"}]
+    },
+    {
+      "id": "helperName",
+      "prompt": "博士觉得呢？",
+      "options": [{"label":"为什么是逗号？","words":["为什么","逗号","为何"],"reply":"它有时会在纸边停一停。我每回看见，都想把刚搁下的半句话说完。","next":"home"}]
+    },
+    {
+      "id": "manuscript",
+      "prompt": "您想听听最后一句吗？",
+      "options": [
+        {
+          "label": "想听",
+          "words": [
+            "读给我",
+            "听听",
+            "想听",
+            "好"
+          ],
+          "reply": "我写的是『有人在岸上等她回来』。『回来』这个词，倒让我改了最久。",
+          "next": "word",
+          "action": ""
+        }
+      ]
+    },
+    {
+      "id": "word",
+      "prompt": "您想问哪个词？",
+      "options": [
+        {
+          "label": "为什么用这个词？",
+          "words": [
+            "为什么",
+            "回来",
+            "抵达",
+            "为何"
+          ],
+          "reply": "『抵达』只说她到了哪里。『回来』还说，那里有人认得她。",
+          "next": "home",
+          "action": ""
+        }
+      ]
+    },
+    {
+      "id": "novel",
+      "prompt": "想聊聊故事的结尾吗？",
+      "options": [
+        {
+          "label": "你喜欢哪种结尾？",
+          "words": [
+            "结尾",
+            "结局",
+            "猜猜",
+            "喜欢",
+            "想听",
+            "好"
+          ],
+          "reply": "我偏爱留一点余地的结尾。读到最后，还能跟人争论两句。",
+          "next": "ending",
+          "action": ""
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "prompt": "想听个例子吗？",
+      "options": [
+        {
+          "label": "比如呢？",
+          "words": [
+            "比如",
+            "例子",
+            "举例",
+            "好"
+          ],
+          "reply": "比如两位证人各说了一半。您先听谁的，会读出两种故事。",
+          "next": "home",
+          "action": ""
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "prompt": "想一起歇一会儿吗？",
+      "options": [
+        {
+          "label": "等一下",
+          "words": [
+            "等一下",
+            "待会",
+            "稍后"
+          ],
+          "reply": "好。十分钟后，我再来问您？",
+          "next": "later",
+          "action": ""
+        },
+        {
+          "label": "喝过了",
+          "words": [
+            "已经喝",
+            "喝了",
+            "喝过"
+          ],
+          "reply": "好，那这次茶歇就记在这里。",
+          "next": "home",
+          "action": "drank"
+        },
+        {
+          "label": "十分钟后",
+          "words": [
+            "十分钟",
+            "10分钟"
+          ],
+          "reply": "就十分钟。您先忙。",
+          "next": "home",
+          "action": "snooze"
+        },
+        {
+          "label": "关闭提醒",
+          "words": [
+            "关闭提醒",
+            "别提醒",
+            "关掉"
+          ],
+          "reply": "好，我把喝水提醒收起来。",
+          "next": "home",
+          "action": "off"
+        }
+      ]
+    },
+    {
+      "id": "later",
+      "prompt": "十分钟后再来问您？",
+      "options": [
+        {
+          "label": "好",
+          "words": [
+            "可以",
+            "好的",
+            "好"
+          ],
+          "reply": "就十分钟。您先忙。",
+          "next": "home",
+          "action": "snooze"
+        },
+        {
+          "label": "不用了",
+          "words": [
+            "不用",
+            "算了"
+          ],
+          "reply": "好，那就按原来的时间。",
+          "next": "home",
+          "action": "dismiss"
+        },
+        {
+          "label": "喝过了",
+          "words": [
+            "已经喝",
+            "喝了",
+            "喝过"
+          ],
+          "reply": "好，那这次茶歇就记在这里。",
+          "next": "home",
+          "action": "drank"
+        },
+        {
+          "label": "关闭提醒",
+          "words": [
+            "关闭提醒",
+            "别提醒",
+            "关掉"
+          ],
+          "reply": "好，我把喝水提醒收起来。",
+          "next": "home",
+          "action": "off"
+        }
+      ]
+    }
+  ],
+  "fallback": "这件事我还没想好。我们先谈谈那页手稿，好吗？",
+  "goodbyes": [
+    "先忙",
+    "再见",
+    "回头聊"
+  ]
+}
